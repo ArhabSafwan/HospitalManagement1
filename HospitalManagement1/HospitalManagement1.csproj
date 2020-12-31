@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Entities\Doctor.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Nurse.cs" />
+    <Compile Include="Entities\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
