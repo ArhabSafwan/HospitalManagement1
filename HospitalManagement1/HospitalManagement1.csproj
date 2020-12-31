@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BussinessLogicLayer\" />
-    <Folder Include="DataAcessLayer\" />
+    <Folder Include="DataAccessLayer\" />
     <Folder Include="PresentationLayer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
