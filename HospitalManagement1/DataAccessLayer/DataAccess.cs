@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement1.DataAccessLayer
 {
-    class DataAccess
+    class DataAccess:IDisposable
     {
         SqlConnection connection;
         SqlCommand command;
@@ -34,5 +34,9 @@ namespace HospitalManagement1.DataAccessLayer
             return result;
         }
 
+        public void Dispose()
+        {
+            this.connection.Close();
+        }
     }
 }
