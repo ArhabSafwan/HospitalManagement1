@@ -65,6 +65,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLogicLayer\StaffService.cs" />
     <Compile Include="DataAccessLayer\StaffDataAccess.cs" />
     <Compile Include="DataAccessLayer\DataAccess.cs" />
     <Compile Include="Entities\AdditionalStaff.cs" />
@@ -97,7 +98,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BussinessLogicLayer\" />
     <Folder Include="PresentationLayer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
