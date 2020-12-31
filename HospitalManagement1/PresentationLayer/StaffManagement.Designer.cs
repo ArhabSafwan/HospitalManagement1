@@ -68,7 +68,7 @@ namespace HospitalManagement1.PresentationLayer
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(27, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(265, 139);
+            this.groupBox1.Size = new System.Drawing.Size(265, 119);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Add New Staff";
@@ -91,7 +91,7 @@ namespace HospitalManagement1.PresentationLayer
             // 
             // addStaffButton
             // 
-            this.addStaffButton.Location = new System.Drawing.Point(142, 87);
+            this.addStaffButton.Location = new System.Drawing.Point(146, 75);
             this.addStaffButton.Name = "addStaffButton";
             this.addStaffButton.Size = new System.Drawing.Size(75, 32);
             this.addStaffButton.TabIndex = 2;
