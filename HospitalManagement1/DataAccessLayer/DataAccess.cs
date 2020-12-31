@@ -18,5 +18,14 @@ namespace HospitalManagement1.DataAccessLayer
             this.connection.Open();
 
         }
+        public SqlDataReader GetData(string sql)
+        {
+            this.command = new SqlCommand(sql,this.connection);
+            SqlDataReader reader = this.command.ExecuteReader();
+            this.connection.Close();
+            return reader;
+        }
+
+
     }
 }
