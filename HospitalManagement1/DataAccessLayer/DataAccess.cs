@@ -22,7 +22,7 @@ namespace HospitalManagement1.DataAccessLayer
         {
             this.command = new SqlCommand(sql,this.connection);
             SqlDataReader reader = this.command.ExecuteReader();
-            this.connection.Close();
+            //this.connection.Close();
             return reader;
         }
 

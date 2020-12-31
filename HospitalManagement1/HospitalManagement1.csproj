@@ -72,8 +72,17 @@
     <Compile Include="Entities\Doctor.cs" />
     <Compile Include="Entities\Nurse.cs" />
     <Compile Include="Entities\Staff.cs" />
+    <Compile Include="PresentationLayer\StaffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\StaffManagement.Designer.cs">
+      <DependentUpon>StaffManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\StaffManagement.resx">
+      <DependentUpon>StaffManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,8 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PresentationLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
