@@ -11,5 +11,6 @@ namespace HospitalManagement1.Entities
         public int NurseId { get; set; }
         public string NurseName { get; set; }
         public int StaffId { get; set; }
+
     }
 }
