@@ -26,6 +26,13 @@ namespace HospitalManagement1.DataAccessLayer
             return reader;
         }
 
+        public int ExecuteQuery(string sql)
+        {
+            this.command = new SqlCommand(sql, this.connection);
+            int result = this.command.ExecuteNonQuery();
+            this.connection.Close();
+            return result;
+        }
 
     }
 }
