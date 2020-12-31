@@ -17,6 +17,7 @@ namespace HospitalManagement1.PresentationLayer
         {
             InitializeComponent();
             addStaffButton.Click += this.RefreshGridView;
+            updateStaffButton.Click += this.RefreshGridView;
         }
 
         private void StaffManagement_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,7 +39,7 @@ namespace HospitalManagement1.PresentationLayer
 
         private void ClearInputFields()
         {
-            addStaffNameTextBox.Text = string.Empty;
+            addStaffNameTextBox.Text = updateStaffNameTextBox.Text = string.Empty;
         }
 
         private void addStaffButton_Click(object sender, EventArgs e)
@@ -55,10 +56,27 @@ namespace HospitalManagement1.PresentationLayer
                 MessageBox.Show("Error in adding new Staff");
             }
         }
+        int id = 0;
 
         private void loadStaffDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            UpdateStaffNameTextBox.Text=loadStaffDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            id =(int) loadStaffDataGridView.Rows[e.RowIndex].Cells[0].Value;
+            updateStaffNameTextBox.Text=loadStaffDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void updateStaffButton_Click(object sender, EventArgs e)
+        {
+            StaffService staffService = new StaffService();
+            int result = staffService.UpdateStaff(id, updateStaffNameTextBox.Text);
+            if (result > 0)
+            {
+                MessageBox.Show(" staff updated");
+                ClearInputFields();
+            }
+            else
+            {
+                MessageBox.Show("Error in updating Staff");
+            }
         }
     }
 }

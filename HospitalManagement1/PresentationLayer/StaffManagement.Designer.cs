@@ -37,7 +37,7 @@ namespace HospitalManagement1.PresentationLayer
             this.addStaffButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.updateStaffButton = new System.Windows.Forms.Button();
-            this.UpdateStaffNameTextBox = new System.Windows.Forms.TextBox();
+            this.updateStaffNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,7 +108,7 @@ namespace HospitalManagement1.PresentationLayer
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.updateStaffButton);
-            this.groupBox2.Controls.Add(this.UpdateStaffNameTextBox);
+            this.groupBox2.Controls.Add(this.updateStaffNameTextBox);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(27, 166);
@@ -126,13 +126,14 @@ namespace HospitalManagement1.PresentationLayer
             this.updateStaffButton.TabIndex = 2;
             this.updateStaffButton.Text = "Save";
             this.updateStaffButton.UseVisualStyleBackColor = true;
+            this.updateStaffButton.Click += new System.EventHandler(this.updateStaffButton_Click);
             // 
-            // UpdateStaffNameTextBox
+            // updateStaffNameTextBox
             // 
-            this.UpdateStaffNameTextBox.Location = new System.Drawing.Point(63, 27);
-            this.UpdateStaffNameTextBox.Name = "UpdateStaffNameTextBox";
-            this.UpdateStaffNameTextBox.Size = new System.Drawing.Size(179, 26);
-            this.UpdateStaffNameTextBox.TabIndex = 1;
+            this.updateStaffNameTextBox.Location = new System.Drawing.Point(63, 27);
+            this.updateStaffNameTextBox.Name = "updateStaffNameTextBox";
+            this.updateStaffNameTextBox.Size = new System.Drawing.Size(179, 26);
+            this.updateStaffNameTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -177,7 +178,7 @@ namespace HospitalManagement1.PresentationLayer
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button updateStaffButton;
-        private System.Windows.Forms.TextBox UpdateStaffNameTextBox;
+        private System.Windows.Forms.TextBox updateStaffNameTextBox;
         private System.Windows.Forms.Label label3;
     }
 }
