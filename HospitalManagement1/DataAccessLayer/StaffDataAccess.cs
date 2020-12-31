@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement1.DataAccessLayer
 {
-    class CatagoryDataAccess
+    class StaffDataAccess
     {
         DataAccess dataAccess;
-        public CatagoryDataAccess()
+        public StaffDataAccess()
         {
             this.dataAccess = new DataAccess();
         }
