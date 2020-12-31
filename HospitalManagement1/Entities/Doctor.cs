@@ -8,7 +8,10 @@ namespace HospitalManagement1.Entities
 {
     class Doctor
     {
-        public int MyProperty { get; set; }
+        public int DoctorId { get; set; }
+        public string DoctorName { get; set; }
+        public  string PhysicianSpecialist { get; set; }
+        public int EmployeeId { get; set; }
 
 
     }
