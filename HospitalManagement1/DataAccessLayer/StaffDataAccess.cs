@@ -15,19 +15,21 @@ namespace HospitalManagement1.DataAccessLayer
         {
             this.dataAccess = new DataAccess();
         }
-        public List<Staff> GetAllStaffs()
+        public Staff GetStaff(int id)
         {
-            string sql = "SELECT FROM Staffs";
+            string sql = "SELECT * FROM  Staffs WHERE  StaffId-"+id;
             SqlDataReader reader =this.dataAccess.GetData(sql);
-            List<Staff> staffs = new List<Staff>();
-            while (reader.Read())
-            {
-                Staff staff = new Staff();
-                staff.StaffId = (int)reader["StaffId"];
-                staff.StaffName = reader["StaffName"].ToString();
-                staffs.Add(staff); 
-            }
-            return staffs;
+            reader.Read();
+            Staff staff = new Staff();
+            staff.StaffId = (int)reader["StaffId"];
+            staff.StaffName = reader["StaffName"].ToString();
+            return staff;
+        }
+        public int insertStaff(Staff staff)
+        {
+            string sql = "INSERT INTO Staffs(StaffName) VALUES('"+staff.StaffName+"')";
+            int result = this.dataAccess.ExecuteQuery(sql);
+            return result;
         }
     }
 }
