@@ -25,9 +25,23 @@ namespace HospitalManagement1.DataAccessLayer
             staff.StaffName = reader["StaffName"].ToString();
             return staff;
         }
-        public int insertStaff(Staff staff)
+        public int InsertStaff(Staff staff)
         {
             string sql = "INSERT INTO Staffs(StaffName) VALUES('"+staff.StaffName+"')";
+            int result = this.dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+        public int UpdateStaff (Staff staff)
+        {
+            string sql = "UPDATE Staffs SET StaffName='"+staff.StaffName+"' WHERE StaffId="+staff.StaffId;
+            int result = this.dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+        public int DeleteStaff(int id)
+        {
+            string sql = "DELETE FROM Staffs WHERE  StaffId="+id;
             int result = this.dataAccess.ExecuteQuery(sql);
             return result;
         }
