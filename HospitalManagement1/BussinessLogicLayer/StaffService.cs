@@ -28,7 +28,7 @@ namespace HospitalManagement1.BussinessLogicLayer
 
         public int UpdateStaff(int id,string staffName)
         {
-            Staff staff = new Staff() { StaffName = staffName };
+            Staff staff = new Staff() { StaffId=id,StaffName = staffName };
             return this.staffDataAccess.UpdateStaff(staff);
         }
 
