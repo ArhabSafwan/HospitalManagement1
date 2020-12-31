@@ -20,6 +20,11 @@ namespace HospitalManagement1.BussinessLogicLayer
         {
             return this.staffDataAccess.GetAllStaffs();
         }
+        public int AddNewStaff(string staffname)
+        {
+            Staff staff = new Staff() { StaffName = staffname };
+            this.staffDataAccess.InsertStaff(staff);
+        }
 
     }
 }
