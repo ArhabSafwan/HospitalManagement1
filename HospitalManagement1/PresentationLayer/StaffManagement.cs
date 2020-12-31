@@ -28,5 +28,10 @@ namespace HospitalManagement1.PresentationLayer
             StaffService staffService = new StaffService();
             loadStaffDataGridView.DataSource = staffService.GetStaffList();
         }
+
+        private void addStaffButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

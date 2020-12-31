@@ -20,5 +20,6 @@ namespace HospitalManagement1.BussinessLogicLayer
         {
             return this.staffDataAccess.GetAllStaffs();
         }
+
     }
 }

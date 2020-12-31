@@ -31,7 +31,12 @@ namespace HospitalManagement1.PresentationLayer
         {
             this.loadStaffDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.addStaffTextBox = new System.Windows.Forms.TextBox();
+            this.addStaffButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadStaffDataGridView
@@ -55,11 +60,51 @@ namespace HospitalManagement1.PresentationLayer
             this.label1.TabIndex = 1;
             this.label1.Text = "List Of Staffs";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.addStaffButton);
+            this.groupBox1.Controls.Add(this.addStaffTextBox);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(27, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(265, 139);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " Add New Staff";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Staff";
+            // 
+            // addStaffTextBox
+            // 
+            this.addStaffTextBox.Location = new System.Drawing.Point(63, 27);
+            this.addStaffTextBox.Name = "addStaffTextBox";
+            this.addStaffTextBox.Size = new System.Drawing.Size(179, 26);
+            this.addStaffTextBox.TabIndex = 1;
+            // 
+            // addStaffButton
+            // 
+            this.addStaffButton.Location = new System.Drawing.Point(142, 87);
+            this.addStaffButton.Name = "addStaffButton";
+            this.addStaffButton.Size = new System.Drawing.Size(75, 32);
+            this.addStaffButton.TabIndex = 2;
+            this.addStaffButton.Text = "Add";
+            this.addStaffButton.UseVisualStyleBackColor = true;
+            this.addStaffButton.Click += new System.EventHandler(this.addStaffButton_Click);
+            // 
             // StaffManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loadStaffDataGridView);
             this.Name = "StaffManagement";
@@ -68,6 +113,8 @@ namespace HospitalManagement1.PresentationLayer
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffManagement_FormClosing);
             this.Load += new System.EventHandler(this.StaffManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,5 +124,9 @@ namespace HospitalManagement1.PresentationLayer
 
         private System.Windows.Forms.DataGridView loadStaffDataGridView;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button addStaffButton;
+        private System.Windows.Forms.TextBox addStaffTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }
