@@ -52,7 +52,7 @@ namespace HospitalManagement1.PresentationLayer
             }
             else
             {
-                    MessageBox.Show("Error in adding new Staff")
+                MessageBox.Show("Error in adding new Staff");
             }
         }
     }
