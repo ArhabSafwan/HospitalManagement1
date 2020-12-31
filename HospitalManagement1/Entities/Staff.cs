@@ -8,8 +8,8 @@ namespace HospitalManagement1.Entities
 {
     class Staff
     {
-        public int MyProperty { get; set; }
-        public int MyProperty { get; set; }
-        public int MyProperty { get; set; }
+        public int StaffId { get; set; }
+        public string StaffName { get; set; }
+        public int EmployeeId { get; set; }
     }
 }
