@@ -55,5 +55,10 @@ namespace HospitalManagement1.PresentationLayer
                 MessageBox.Show("Error in adding new Staff");
             }
         }
+
+        private void loadStaffDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UpdateStaffNameTextBox.Text=loadStaffDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
     }
 }

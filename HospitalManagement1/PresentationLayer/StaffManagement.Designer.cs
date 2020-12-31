@@ -35,8 +35,13 @@ namespace HospitalManagement1.PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.addStaffNameTextBox = new System.Windows.Forms.TextBox();
             this.addStaffButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.updateStaffButton = new System.Windows.Forms.Button();
+            this.UpdateStaffNameTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadStaffDataGridView
@@ -49,6 +54,7 @@ namespace HospitalManagement1.PresentationLayer
             this.loadStaffDataGridView.ReadOnly = true;
             this.loadStaffDataGridView.Size = new System.Drawing.Size(240, 150);
             this.loadStaffDataGridView.TabIndex = 0;
+            this.loadStaffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadStaffDataGridView_CellClick);
             // 
             // label1
             // 
@@ -99,11 +105,50 @@ namespace HospitalManagement1.PresentationLayer
             this.addStaffButton.UseVisualStyleBackColor = true;
             this.addStaffButton.Click += new System.EventHandler(this.addStaffButton_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.updateStaffButton);
+            this.groupBox2.Controls.Add(this.UpdateStaffNameTextBox);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(27, 166);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(265, 119);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Update Staff";
+            // 
+            // updateStaffButton
+            // 
+            this.updateStaffButton.Location = new System.Drawing.Point(146, 75);
+            this.updateStaffButton.Name = "updateStaffButton";
+            this.updateStaffButton.Size = new System.Drawing.Size(75, 32);
+            this.updateStaffButton.TabIndex = 2;
+            this.updateStaffButton.Text = "Save";
+            this.updateStaffButton.UseVisualStyleBackColor = true;
+            // 
+            // UpdateStaffNameTextBox
+            // 
+            this.UpdateStaffNameTextBox.Location = new System.Drawing.Point(63, 27);
+            this.UpdateStaffNameTextBox.Name = "UpdateStaffNameTextBox";
+            this.UpdateStaffNameTextBox.Size = new System.Drawing.Size(179, 26);
+            this.UpdateStaffNameTextBox.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Staff";
+            // 
             // StaffManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loadStaffDataGridView);
@@ -115,6 +160,8 @@ namespace HospitalManagement1.PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +175,9 @@ namespace HospitalManagement1.PresentationLayer
         private System.Windows.Forms.Button addStaffButton;
         private System.Windows.Forms.TextBox addStaffNameTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button updateStaffButton;
+        private System.Windows.Forms.TextBox UpdateStaffNameTextBox;
+        private System.Windows.Forms.Label label3;
     }
 }
