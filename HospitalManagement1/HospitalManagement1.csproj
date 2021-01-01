@@ -68,9 +68,6 @@
     <Compile Include="BussinessLogicLayer\StaffService.cs" />
     <Compile Include="DataAccessLayer\StaffDataAccess.cs" />
     <Compile Include="DataAccessLayer\DataAccess.cs" />
-    <Compile Include="Entities\AdditionalStaff.cs" />
-    <Compile Include="Entities\Doctor.cs" />
-    <Compile Include="Entities\Nurse.cs" />
     <Compile Include="Entities\Staff.cs" />
     <Compile Include="PresentationLayer\StaffManagement.cs">
       <SubType>Form</SubType>
