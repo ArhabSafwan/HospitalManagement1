@@ -39,9 +39,14 @@ namespace HospitalManagement1.PresentationLayer
             this.updateStaffButton = new System.Windows.Forms.Button();
             this.updateStaffNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.deleteStaffButton = new System.Windows.Forms.Button();
+            this.deleteStaffIdTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loadStaffDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadStaffDataGridView
@@ -144,11 +149,51 @@ namespace HospitalManagement1.PresentationLayer
             this.label3.TabIndex = 0;
             this.label3.Text = "Staff";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.deleteStaffButton);
+            this.groupBox3.Controls.Add(this.deleteStaffIdTextBox);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(27, 305);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(265, 119);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Remove Staff";
+            // 
+            // deleteStaffButton
+            // 
+            this.deleteStaffButton.Location = new System.Drawing.Point(146, 72);
+            this.deleteStaffButton.Name = "deleteStaffButton";
+            this.deleteStaffButton.Size = new System.Drawing.Size(83, 32);
+            this.deleteStaffButton.TabIndex = 2;
+            this.deleteStaffButton.Text = "Remove";
+            this.deleteStaffButton.UseVisualStyleBackColor = true;
+            this.deleteStaffButton.Click += new System.EventHandler(this.deleteStaffButton_Click);
+            // 
+            // deleteStaffIdTextBox
+            // 
+            this.deleteStaffIdTextBox.Location = new System.Drawing.Point(63, 28);
+            this.deleteStaffIdTextBox.Name = "deleteStaffIdTextBox";
+            this.deleteStaffIdTextBox.Size = new System.Drawing.Size(179, 26);
+            this.deleteStaffIdTextBox.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Staff";
+            // 
             // StaffManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -163,6 +208,8 @@ namespace HospitalManagement1.PresentationLayer
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +227,9 @@ namespace HospitalManagement1.PresentationLayer
         private System.Windows.Forms.Button updateStaffButton;
         private System.Windows.Forms.TextBox updateStaffNameTextBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button deleteStaffButton;
+        private System.Windows.Forms.TextBox deleteStaffIdTextBox;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -31,6 +31,12 @@ namespace HospitalManagement1.BussinessLogicLayer
             Staff staff = new Staff() { StaffId=id,StaffName = staffName };
             return this.staffDataAccess.UpdateStaff(staff);
         }
+        public int DeleteStaff(int id) 
+        {
+
+            return this.staffDataAccess.DeleteStaff(id);
+        }
+
 
     }
 }

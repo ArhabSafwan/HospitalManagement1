@@ -18,6 +18,7 @@ namespace HospitalManagement1.PresentationLayer
             InitializeComponent();
             addStaffButton.Click += this.RefreshGridView;
             updateStaffButton.Click += this.RefreshGridView;
+            deleteStaffButton.Click += this.RefreshGridView;
         }
 
         private void StaffManagement_FormClosing(object sender, FormClosingEventArgs e)
@@ -76,6 +77,21 @@ namespace HospitalManagement1.PresentationLayer
             else
             {
                 MessageBox.Show("Error in updating Staff");
+            }
+        }
+
+        private void deleteStaffButton_Click(object sender, EventArgs e)
+        {
+            StaffService staffService = new StaffService();
+            int result = staffService.DeleteStaff(Convert.ToInt32(deleteStaffIdTextBox.Text));
+            if (result > 0)
+            {
+                MessageBox.Show(" Deleted");
+                ClearInputFields();
+            }
+            else
+            {
+                MessageBox.Show("Error Deletion");
             }
         }
     }
