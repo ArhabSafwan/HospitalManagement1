@@ -31,6 +31,7 @@ namespace HospitalManagement1.DataAccessLayer
                 employee.Specialist = reader["Specialist"].ToString();
                 employee.Salary = (int)reader["Salary"];
                 employee.StaffId = (int)reader["StaffId"];
+                employees.Add(employee);
             }
             return employees;
         }
@@ -58,13 +59,50 @@ namespace HospitalManagement1.DataAccessLayer
             return this.dataAccess.ExecuteQuery(sql);
         }
 
+        public int UpdateEmployee(Employee employee)
+        {
+            string sql = "UPDATE Employees SET EmployeeName='" + employee.EmployeeName + "' WHERE EmployeeId=" + employee.EmployeeId;
+            int result = this.dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+
+
+        public int DeleteEmployee(int id)
+        {
+            string sql = "DELETE FROM Employees WHERE  EmployeeId=" + id;
+            int result = this.dataAccess.ExecuteQuery(sql);
+            return result;
+        }
+
+
+
         public int GetStaffId(string staffName)
         {
             string StaffIdSearchSql = "SELECT * FROM Staffs WHERE StaffName = '" + staffName + "'";
             SqlDataReader reader = this.dataAccess.GetData(StaffIdSearchSql);
             reader.Read();
-            int StaffId = (int)reader["StaffId"];
-            return StaffId;
+            int staffId = (int)reader["StaffId"];
+            return staffId;
+        }
+
+        public List<Employee> GetEmployeesByEmployeeName(string employeeName)
+        {
+            string sql = "SELECT * FROM Employees WHERE employeeName LIKE '"+employeeName+"%'  ";
+            SqlDataReader reader = dataAccess.GetData(sql);
+            List<Employee> employees = new List<Employee>();
+            while (reader.Read())
+            {
+                Employee employee = new Employee();
+                employee.EmployeeId = (int)reader["EmployeeId"];
+                employee.EmployeeName = reader["EmployeeName"].ToString();
+                employee.Occupation = reader["Occupation"].ToString();
+                employee.Specialist = reader["Specialist"].ToString();
+                employee.Salary = (int)reader["Salary"];
+                employee.StaffId = (int)reader["StaffId"];
+                employees.Add(employee);
+            }
+            return employees;
         }
 
     }

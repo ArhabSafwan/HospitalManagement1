@@ -35,10 +35,9 @@ namespace HospitalManagement1.PresentationLayer
                 bool result = userService.LoginValidation(userNameTextBox.Text, passwordTextBox.Text);
                 if (result)
                 {
-                    StaffManagement sm = new StaffManagement();
-                    sm.Show();
-                    this.Hide();
-
+                    HomePage homePage = new HomePage();
+                    homePage.Show();
+                    
                 }
                 else
                 {

@@ -13,7 +13,7 @@ namespace HospitalManagement1.PresentationLayer
 {
     public partial class StaffManagement : Form
     {
-        public StaffManagement()
+        public StaffManagement(HomePage homePage)
         {
             InitializeComponent();
             addStaffButton.Click += this.RefreshGridView;
