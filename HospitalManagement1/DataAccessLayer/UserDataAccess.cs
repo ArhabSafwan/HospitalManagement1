@@ -16,7 +16,7 @@ namespace HospitalManagement1.DataAccessLayer
         }
         public bool LogInValidation(string username, string password)
         {
-            string sql = "SELECT * FROM Users WHERE Username='"+username+"' AND Password='"+password+"';
+            string sql = "SELECT * FROM Users WHERE Username='"+username+"' AND Password='"+password+"'";
                 SqlDataReader reader = dataAccess.GetData(sql);
             if (reader.Read())
             {

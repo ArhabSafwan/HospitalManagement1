@@ -60,5 +60,16 @@ namespace HospitalManagement1.DataAccessLayer
             int result = this.dataAccess.ExecuteQuery(sql);
             return result;
         }
+        public List<string> GetAllStaffNames()
+        {
+            string sql = "SELECT * FROM Staffs";
+            SqlDataReader reader = this.dataAccess.GetData(sql);
+            List<String> staffs = new List<String>();
+            while (reader.Read())
+            {
+                staffs.Add(reader["StaffName"].ToString());
+            }
+            return staffs;
+        }
     }
 }

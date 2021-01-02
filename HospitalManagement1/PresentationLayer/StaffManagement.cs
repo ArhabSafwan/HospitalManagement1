@@ -30,6 +30,8 @@ namespace HospitalManagement1.PresentationLayer
         {
             StaffService staffService = new StaffService();
             loadStaffDataGridView.DataSource = staffService.GetStaffList();
+            staffService = new StaffService();
+            SearchStaffcomboBox.DataSource = staffService.GetStaffNameList();
         }
 
         private void RefreshGridView(object sender, EventArgs e)
@@ -93,6 +95,11 @@ namespace HospitalManagement1.PresentationLayer
             {
                 MessageBox.Show("Error Deletion");
             }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
