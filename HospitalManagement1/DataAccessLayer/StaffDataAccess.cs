@@ -60,11 +60,12 @@ namespace HospitalManagement1.DataAccessLayer
             int result = this.dataAccess.ExecuteQuery(sql);
             return result;
         }
+
         public List<string> GetAllStaffNames()
         {
             string sql = "SELECT * FROM Staffs";
             SqlDataReader reader = this.dataAccess.GetData(sql);
-            List<String> staffs = new List<String>();
+            List<string> staffs = new List<string>();
             while (reader.Read())
             {
                 staffs.Add(reader["StaffName"].ToString());
@@ -89,8 +90,9 @@ namespace HospitalManagement1.DataAccessLayer
                 employee.EmployeeName = reader["EmployeeName"].ToString();
                 employee.Occupation = reader["Occupation"].ToString();
                 employee.Specialist = reader["Specialist"].ToString();
-                employee.Salary = (int)reader["Salary"];
+                employee.Salary = (int) reader["Salary"];
                 employee.StaffId = (int)reader["StaffId"];
+                employees.Add(employee);
             }
             return employees;
         }

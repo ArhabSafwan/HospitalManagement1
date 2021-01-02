@@ -13,12 +13,16 @@ namespace HospitalManagement1.PresentationLayer
 {
     public partial class StaffManagement : Form
     {
+        HomePage homePage;
         public StaffManagement(HomePage homePage)
         {
+            this.homePage = homePage;
             InitializeComponent();
             addStaffButton.Click += this.RefreshGridView;
             updateStaffButton.Click += this.RefreshGridView;
-            deleteStaffButton.Click += this.RefreshGridView;
+            DeleteStaffButton.Click += this.RefreshGridView;
+
+
         }
 
         private void StaffManagement_FormClosing(object sender, FormClosingEventArgs e)
@@ -44,7 +48,8 @@ namespace HospitalManagement1.PresentationLayer
 
         private void ClearInputFields()
         {
-            addStaffNameTextBox.Text = updateStaffNameTextBox.Text = string.Empty;
+            addStaffNameTextBox.Text = updateStaffNameTextBox.Text =DeleteStaffIdtextBox.Text= string.Empty;
+
         }
 
         private void addStaffButton_Click(object sender, EventArgs e)
@@ -84,30 +89,36 @@ namespace HospitalManagement1.PresentationLayer
             }
         }
 
-        private void deleteStaffButton_Click(object sender, EventArgs e)
+        private void DeleteStaffbutton_Click(object sender, EventArgs e)
         {
             StaffService staffService = new StaffService();
-            int result = staffService.DeleteStaff(Convert.ToInt32(deleteStaffIdTextBox.Text));
+            int result = staffService.DeleteStaff(Convert.ToInt32(DeleteStaffIdtextBox.Text));
             if (result > 0)
             {
-                MessageBox.Show(" Deleted");
+                MessageBox.Show(" Deleted Successfully...");
                 ClearInputFields();
             }
             else
             {
-                MessageBox.Show("Error Deletion");
+                MessageBox.Show("Error!!!");
             }
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
+        private void SearchStaffcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            StaffService staffService = new StaffService();
+            StaffwiseEmployeelistdataGridView.DataSource = staffService.GetEmployeeListByStaff(SearchStaffcomboBox.Text);
         }
 
         private void StaffwiseEmployeelistdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            StaffService staffService = new StaffService();
-            StaffwiseEmployeelistdataGridView.DataSource = staffService.GetEmployeeListByStaff(SearchStaffcomboBox.Text);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            homePage.Show();
+            this.Hide();
         }
     }
 }

@@ -69,8 +69,8 @@
     <Compile Include="BussinessLogicLayer\StaffService.cs" />
     <Compile Include="BussinessLogicLayer\UserService.cs" />
     <Compile Include="DataAccessLayer\EmployeeDataAccess.cs" />
-    <Compile Include="DataAccessLayer\StaffDataAccess.cs" />
     <Compile Include="DataAccessLayer\DataAccess.cs" />
+    <Compile Include="DataAccessLayer\StaffDataAccess.cs" />
     <Compile Include="DataAccessLayer\UserDataAccess.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Staff.cs" />
@@ -96,7 +96,7 @@
     <Compile Include="PresentationLayer\StaffManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\StaffManagement.Designer.cs">
+    <Compile Include="PresentationLayer\StaffManagement.designer.cs">
       <DependentUpon>StaffManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
