@@ -38,6 +38,8 @@ namespace HospitalManagement1.PresentationLayer
         {
             StaffService staffService = new StaffService();
             loadStaffDataGridView.DataSource = staffService.GetStaffList();
+            staffService = new StaffService();
+            SearchStaffcomboBox.DataSource = staffService.GetStaffNameList();
         }
 
         private void ClearInputFields()
@@ -100,6 +102,12 @@ namespace HospitalManagement1.PresentationLayer
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void StaffwiseEmployeelistdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            StaffService staffService = new StaffService();
+            StaffwiseEmployeelistdataGridView.DataSource = staffService.GetEmployeeListByStaff(SearchStaffcomboBox.Text);
         }
     }
 }

@@ -71,5 +71,28 @@ namespace HospitalManagement1.DataAccessLayer
             }
             return staffs;
         }
+
+        public List<Employee> GetEmployeeListByStaff(string StaffName)
+        {
+            string StaffIdSearchSql = "SELECT * FROM Staffs WHERE StaffName = '" + StaffName + "'";
+            SqlDataReader reader = this.dataAccess.GetData(StaffIdSearchSql);
+            reader.Read();
+            int StaffId = (int)reader["StaffId"];
+            string sql = "SELECT * FROM Employees WHERE StaffId=" + StaffId;
+            dataAccess = new DataAccess();
+            reader = dataAccess.GetData(sql);
+            List<Employee> employees = new List<Employee>();
+            while (reader.Read())
+            {
+                Employee employee = new Employee();
+                employee.EmployeeId = (int)reader["EmployeeId"];
+                employee.EmployeeName = reader["EmployeeName"].ToString();
+                employee.Occupation = reader["Occupation"].ToString();
+                employee.Specialist = reader["Specialist"].ToString();
+                employee.Salary = (int)reader["Salary"];
+                employee.StaffId = (int)reader["StaffId"];
+            }
+            return employees;
+        }
     }
 }

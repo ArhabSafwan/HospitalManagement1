@@ -42,6 +42,11 @@ namespace HospitalManagement1.BussinessLogicLayer
             return this.staffDataAccess.GetAllStaffNames();
         }
 
+        public List<Employee> GetEmployeeListByStaff(string StaffName)
+        {
+            return this.staffDataAccess.GetEmployeeListByStaff(StaffName);
+        }
+
 
     }
 }

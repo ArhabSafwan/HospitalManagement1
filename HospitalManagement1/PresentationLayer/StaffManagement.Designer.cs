@@ -223,6 +223,7 @@ namespace HospitalManagement1.PresentationLayer
             this.StaffwiseEmployeelistdataGridView.RowTemplate.Height = 24;
             this.StaffwiseEmployeelistdataGridView.Size = new System.Drawing.Size(351, 148);
             this.StaffwiseEmployeelistdataGridView.TabIndex = 3;
+            this.StaffwiseEmployeelistdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StaffwiseEmployeelistdataGridView_CellContentClick);
             // 
             // SearchStaffcomboBox
             // 

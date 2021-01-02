@@ -65,13 +65,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLogicLayer\EmployeeService.cs" />
     <Compile Include="BussinessLogicLayer\StaffService.cs" />
     <Compile Include="BussinessLogicLayer\UserService.cs" />
+    <Compile Include="DataAccessLayer\EmployeeDataAccess.cs" />
     <Compile Include="DataAccessLayer\StaffDataAccess.cs" />
     <Compile Include="DataAccessLayer\DataAccess.cs" />
     <Compile Include="DataAccessLayer\UserDataAccess.cs" />
+    <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Staff.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="PresentationLayer\EmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\EmployeeManagement.designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
